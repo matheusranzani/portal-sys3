@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Portal Sys3</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="header">
+            <img src="images/header-img.svg" alt="Logo Sys3 Header">
+        </div>
+
+        <div id="container">
+            <div id="sidebar">
+                <div class="links">
+                    <img class="box" src="images/box.svg" alt="Box Icon"> <a href="index.html">Dashboard</a>
+                </div>
+    
+                <button class="collapsible" onclick="handleProducts()">
+                    <img class="box" src="images/box.svg" alt="Box Icon"> <span>Produtos</span>
+                </button>
+                <div class="collapsible-content">
+                    <div class="collapsible-links">
+                        <img class="box" src="images/box.svg" alt="Box Icon"> <a href="consultar-produtos.html">Consultar</a>
+                    </div>
+                    <div class="collapsible-links">
+                        <img class="box" src="images/box.svg" alt="Box Icon"> <a href="cadastrar-produtos.html">Cadastrar</a>
+                    </div>
+                </div>
+
+                <div class="links">
+                    <img class="box" src="images/box.svg" alt="Box Icon"> <a href="consultar-vendas.html">Vendas</a>
+                </div>
+    
+                <div class="links">
+                    <img class="box" src="images/box.svg" alt="Box Icon"> <a href="">Configurações</a>
+                </div>
+            </div>
+    
+            <div id="main-container">
+                <h1>VENDA</h1>
+                <div class="content-container">
+                    <div class="content-header">
+                        <h1>CONSULTA</h1>
+                    </div>
+
+                    <div class="table-buttons">
+                        <button>+ Filtrar</button>
+                    </div>
+
+                    <div id="table-content" class="table-content">
+                        <table id="sells-table">
+                            <thead>
+                                <tr>
+                                    <th>Nº Venda.</th>
+                                    <th>Data Emissão</th>
+                                    <th>Cliente</th>
+                                    <th>Vendedor</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sells-body">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="table-pagination" class="table-pagination">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts.js"></script>
+    </body>
+</html>
