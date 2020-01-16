@@ -251,7 +251,7 @@ button {
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 15px;
+    bottom: 24px;
 }
 
 .table-pagination .search-product-pagination {
