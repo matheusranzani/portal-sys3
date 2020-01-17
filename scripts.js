@@ -266,7 +266,6 @@ function fillTable(tableBodyId, json, rows, page) {
 	let start = rows * page;
 	let end = start + rows;
     let paginatedItems = (json.rows.slice(start, end));
-    console.log(paginatedItems);
 
     for (let i = 0; i < paginatedItems.length; i++) {
         const tr = document.createElement('tr');
