@@ -31,7 +31,7 @@ const json_products = {
         },
         {
             "data": [
-                241,
+                2241,
                 241,
                 "CP MB 501",
                 1,
@@ -91,19 +91,7 @@ const json_products = {
         },
         {
             "data": [
-                243,
-                243,
-                "CP DUOS TOUCH",
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
-        },
-        {
-            "data": [
-                243,
+                246,
                 243,
                 "CP DUOS TOUCH",
                 1,
@@ -115,19 +103,7 @@ const json_products = {
         },
         {
             "data": [
-                243,
-                243,
-                "CP DUOS TOUCH",
-                1,
-                2,
-                3,
-                4,
-                5
-            ]
-        },
-        {
-            "data": [
-                243,
+                247,
                 243,
                 "CP DUOS TOUCH",
                 1,
@@ -139,7 +115,31 @@ const json_products = {
         },
         {
             "data": [
+                248,
                 243,
+                "CP DUOS TOUCH",
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "data": [
+                249,
+                243,
+                "CP DUOS TOUCH",
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "data": [
+                444,
                 243,
                 "CP DUOS TOUCH",
                 1,
@@ -166,7 +166,7 @@ const json_sells = {
         },
         {
             "data": [
-                42,
+                43,
                 "23/01/2019 8:44",
                 "Jeziel Francisco",
                 "Jeziel",
@@ -176,7 +176,7 @@ const json_sells = {
         },
         {
             "data": [
-                42,
+                44,
                 "23/01/2019 8:44",
                 "Jeziel Francisco",
                 "Jeziel",
@@ -186,7 +186,7 @@ const json_sells = {
         },
         {
             "data": [
-                42,
+                45,
                 "23/01/2019 8:44",
                 "Jeziel Francisco",
                 "Jeziel",
@@ -196,7 +196,7 @@ const json_sells = {
         },
         {
             "data": [
-                42,
+                46,
                 "23/01/2019 8:44",
                 "Jeziel Francisco",
                 "Jeziel",
@@ -206,7 +206,7 @@ const json_sells = {
         },
         {
             "data": [
-                42,
+                47,
                 "23/01/2019 8:44",
                 "Jeziel Francisco",
                 "Jeziel",
@@ -216,7 +216,7 @@ const json_sells = {
         },
         {
             "data": [
-                42,
+                48,
                 "23/01/2019 8:44",
                 "Jeziel Francisco",
                 "Jeziel",
@@ -226,7 +226,7 @@ const json_sells = {
         },
         {
             "data": [
-                42,
+                49,
                 "23/01/2019 8:44",
                 "Jeziel Francisco",
                 "Jeziel",
@@ -236,7 +236,7 @@ const json_sells = {
         },
         {
             "data": [
-                42,
+                50,
                 "23/01/2019 8:44",
                 "Jeziel Francisco",
                 "Jeziel",
@@ -265,14 +265,15 @@ function fillTable(tableBodyId, json, rows, page) {
 
 	let start = rows * page;
 	let end = start + rows;
-	let paginatedItems = (json.rows.slice(start, end)).length;
+    let paginatedItems = (json.rows.slice(start, end));
+    console.log(paginatedItems);
 
-    for (let i = 0; i < paginatedItems; i++) {
+    for (let i = 0; i < paginatedItems.length; i++) {
         const tr = document.createElement('tr');
         
         for (let j = 0; j < json.rows[0].data.length; j++) {
             const td = document.createElement('td');
-            td.appendChild(document.createTextNode(json.rows[i].data[j]));
+            td.appendChild(document.createTextNode(paginatedItems[i].data[j]));
             tr.appendChild(td);
         }
         
