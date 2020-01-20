@@ -15,7 +15,7 @@ function handleProducts() {
     }
 }
 
-function switchButtonToOff() {
+function switchButtonToOn() {
     const buttonON = document.querySelector('#on');
     const buttonOFF = document.querySelector('#off');
 
@@ -30,7 +30,7 @@ function switchButtonToOff() {
     }
 }
 
-function switchButtonToOn() {
+function switchButtonToOff() {
     const buttonON = document.querySelector('#on');
     const buttonOFF = document.querySelector('#off');
 

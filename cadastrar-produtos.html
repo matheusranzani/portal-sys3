@@ -59,8 +59,8 @@
                         <div class="input-container">
                             <span class="default-span">Ativo?</span>
                             <div class="display-row">
-                                <button type="button" class="input-button-on" id="on" value="on" onclick="switchButtonToOff();">ON</button>
-                                <button type="button" class="input-button-off" id="off" value="off" onclick="switchButtonToOn();">OFF</button>
+                                <button type="button" class="input-button-on" id="on" value="on" onclick="switchButtonToOn();">ON</button>
+                                <button type="button" class="input-button-off" id="off" value="off" onclick="switchButtonToOff();">OFF</button>
                             </div>
                         </div>
 
@@ -137,8 +137,8 @@
                         </div>
 
                         <div class="buttons-container">
-                            <button type="reset" class="reset-button">Cancelar</button>
                             <button type="submit" class="submit-button">Salvar</button>
+                            <button type="reset" onclick="switchButtonToOn();" class="reset-button">Cancelar</button>
                         </div>
                     </form>    
                 </div>
