@@ -19,9 +19,7 @@ function switchButtonToOn() {
     const buttonON = document.querySelector('#on');
     const buttonOFF = document.querySelector('#off');
 
-    if (window.getComputedStyle(buttonON).color === 'rgb(255, 255, 255)') {
-        return;
-    } else {
+    if (window.getComputedStyle(buttonON).color !== 'rgb(255, 255, 255)') {
         buttonON.style.backgroundColor = "#42bda4";
         buttonON.style.color = "#fff";
 
@@ -40,8 +38,6 @@ function switchButtonToOff() {
 
         buttonOFF.style.backgroundColor = "#42bda4";
         buttonOFF.style.color = "#fff";
-    } else {
-        return;
     }
 }
 
