@@ -112,14 +112,14 @@ button {
     margin-right: 75px;
 }
 
-.collapsible:after {
+.collapsible::after {
     content: '\002B';
     color: black;
     font-weight: bold;
     float: right;
 }
 
-.active:after {
+.active::after {
     content: "\2212";
 }
 
