@@ -86,7 +86,8 @@ body {
 .input-container .email-input {
   width: 260px;
   height: 40px;
-  padding: 19px 22px 3px 22px;
+  /* padding: 19px 22px 3px 22px; */
+  padding: 8px 15px;
   font-family: 'Multi', Verdana, sans-serif;
 }
 
