@@ -1,6 +1,9 @@
 const express = require('express');
-const mongoose = require('mongoose');
+const routes = express.Router();
 
-const route = express();
+const ProductController = require('./controllers/ProductController');
 
-// route.get
+routes.get('/', ProductController.index);
+routes.post('/', ProductController.create);
+
+module.exports = routes;
