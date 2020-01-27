@@ -49,18 +49,13 @@
                         <h1>CADASTRO</h1>
                     </div>
 
-                    <form class="form-vendas">
+                    <form class="form">
                         <div class="input-container">
                             <span class="default-span">Código</span>
                             <input type="text" class="default-input">
                         </div>
 
-                        <div class="input-container">
-                            <span class="default-span">Cód. Próprio</span>
-                            <input type="text" class="default-input">
-                        </div>
-                        
-                        <div class="input-container">
+                        <div class="input-container" style="padding-right: 110px">
                             <span class="default-span">Ativo?</span>
                             <div class="display-row">
                                 <button type="button" class="input-button-on" id="on" value="on" onclick="switchButtonToOn();">ON</button>
@@ -68,20 +63,9 @@
                             </div>
                         </div>
 
-
-                        <div class="input-container">
+                        <div class="input-container" style="padding-right: 0;">
                             <span class="default-span">Descrição</span>
-                            <input type="text" class="default-input">
-                        </div>
-
-                        <div class="input-container">
-                            <span class="default-span">Embalagem</span>
-                            <select>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
-                            <span class="no-register">Não há embalagens cadastradas</span>
+                            <input type="text" class="default-input" style="width: 170px;">
                         </div>
 
                         <div class="input-container">
@@ -94,53 +78,12 @@
                             <span class="no-register">Não há grupos cadastrados</span>
                         </div>
 
-                        <div class="barcode-container">
-                            <span class="default-span">Cód. Barras</span>
-                            <div class="display-row">
-                                <input type="number" class="barcode-input">
-                                <button class="add-barcode">+</button>
-                                <button class="search-barcode">?</button>
-                            </div>
+                        <div class="input-container" style="padding-right: 20px;">
+                            <span class="default-span">Quantidade Estoque</span>
+                            <input type="number" class="default-input">
                         </div>
-
-                        <div class="product-data-container">
-                            <div class="input-product-data">
-                                <span>R$ Custo</span>
-                                <input type="number" class="default-product-data-input">
-                            </div>
-
-                            <div class="input-product-data">
-                                <span>% MKP</span>
-                                <input type="number" class="default-product-data-input">
-                            </div>
-
-                            <div class="input-product-data">
-                                <span>R$ Preço Venda</span>
-                                <input type="number" class="default-product-data-input">
-                            </div>
-
-                            <div class="input-product-data">
-                                <span>% Comissão</span>
-                                <input type="number" class="default-product-data-input">
-                            </div>
-
-                            <div class="input-product-data">
-                                <span>NCM</span>
-                                <input type="number" class="default-product-data-input">
-                            </div>
-
-                            <div class="input-product-data">
-                                <span>CST</span>
-                                <input type="number" class="default-product-data-input">
-                            </div>
-
-                            <div class="input-product-data">
-                                <span>Quantidade Estoque</span>
-                                <input type="number" class="stock-quantity-input">
-                            </div>
-                        </div>
-
-                        <div class="buttons-container">
+                     
+                        <div class="crud-buttons-container">
                             <button type="submit" class="submit-button">Salvar</button>
                             <button type="reset" onclick="switchButtonToOn();" class="reset-button">Cancelar</button>
                         </div>
