@@ -286,7 +286,7 @@ button {
 .input-container {
     display: flex;
     flex-direction: column;
-    padding: 10px 50px 10px 10px;
+    padding: 10px 28px 10px 10px;
 }
 
 .display-row {
@@ -445,8 +445,8 @@ input::-webkit-inner-spin-button {
 .buttons-container {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    padding: 0px 14px;
+    justify-content: center;
+    padding: 40px 14px;
 }
 
 .reset-button {

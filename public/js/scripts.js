@@ -48,8 +48,6 @@ const json_products = {
                 3000,
                 240,
                 "CAPA GIRATÓRIA",
-                1,
-                2,
             ]
         },
         {
@@ -57,8 +55,6 @@ const json_products = {
                 2241,
                 241,
                 "CP MB 501",
-                1,
-                2,
             ]
         },
         {
@@ -66,8 +62,6 @@ const json_products = {
                 242,
                 242,
                 "CP MB 502",
-                1,
-                2,
             ]
         },
         {
@@ -75,8 +69,6 @@ const json_products = {
                 243,
                 243,
                 "CP DUOS TOUCH",
-                1,
-                2,
             ]
         },
         {
@@ -84,8 +76,6 @@ const json_products = {
                 244,
                 244,
                 "CP DUOS TOUCH",
-                1,
-                2,
             ]
         },
         {
@@ -93,8 +83,6 @@ const json_products = {
                 245,
                 245,
                 "CP DUOS TOUCH",
-                1,
-                2,
             ]
         },
         {
@@ -102,8 +90,6 @@ const json_products = {
                 246,
                 243,
                 "CP DUOS TOUCH",
-                1,
-                2,
             ]
         },
         {
@@ -111,8 +97,6 @@ const json_products = {
                 247,
                 243,
                 "CP DUOS TOUCH",
-                1,
-                2,
             ]
         },
         {
@@ -120,8 +104,6 @@ const json_products = {
                 248,
                 243,
                 "CP DUOS TOUCH",
-                1,
-                2,
             ]
         },
         {
@@ -129,8 +111,6 @@ const json_products = {
                 249,
                 243,
                 "CP DUOS TOUCH",
-                1,
-                2,
             ]
         },
         {
@@ -138,8 +118,6 @@ const json_products = {
                 444,
                 243,
                 "CP DUOS TOUCH",
-                1,
-                2,
             ]
         }
     ]

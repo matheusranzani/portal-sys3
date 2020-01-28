@@ -5,16 +5,7 @@ const ProductSchema = mongoose.Schema({
         type: Number,
         required: true
     },
-    ON: {
-        type: Boolean,
-        default: true,
-        required: true
-    },
     description: {
-        type: String,
-        required: true
-    },
-    group: {
         type: String,
         required: true
     },
