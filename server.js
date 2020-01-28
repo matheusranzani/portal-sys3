@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -33,8 +34,15 @@ requireDir('./src/models');
 //     return res.send('Route is here');
 // });
 
-app.use(express.json());
-app.use('/', require('./routes'));
+// app.use(express.json());
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'));
+app.post('/create', (req, res) => {
+    console.log(req.body);
+});
+
+// app.use('/', require('./routes'));
 
 const port = 3001;
 app.listen(port, () => {

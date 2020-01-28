@@ -49,38 +49,38 @@
                         <h1>CADASTRO</h1>
                     </div>
 
-                    <form action="" class="form">
+                    <form action="/create" class="form">
                         <div class="input-container">
                             <span class="default-span">Código</span>
-                            <input type="text" class="default-input">
+                            <input type="text" class="default-input" name="code">
                         </div>
 
                         <div class="input-container" style="padding-right: 110px">
                             <span class="default-span">Ativo?</span>
                             <div class="display-row">
-                                <button type="button" class="input-button-on" id="on" value="on" onclick="switchButtonToOn();">ON</button>
-                                <button type="button" class="input-button-off" id="off" value="off" onclick="switchButtonToOff();">OFF</button>
+                                <button type="button" class="input-button-on" id="on" value="on" name="on" onclick="switchButtonToOn();">ON</button>
+                                <button type="button" class="input-button-off" id="off" value="off" name="off" onclick="switchButtonToOff();">OFF</button>
                             </div>
                         </div>
 
                         <div class="input-container" style="padding-right: 0;">
                             <span class="default-span">Descrição</span>
-                            <input type="text" class="default-input" style="width: 170px;">
+                            <input name="description" type="text" class="default-input" style="width: 170px;">
                         </div>
 
                         <div class="input-container">
                             <span class="default-span">Grupo</span>
                             <select>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
                             </select>
                             <span class="no-register">Não há grupos cadastrados</span>
                         </div>
 
                         <div class="input-container" style="padding-right: 20px;">
                             <span class="default-span">Quantidade Estoque</span>
-                            <input type="number" class="default-input">
+                            <input name="stockQuantity" type="number" class="default-input">
                         </div>
                      
                         <div class="crud-buttons-container">

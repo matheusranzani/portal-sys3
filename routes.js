@@ -1,9 +1,12 @@
-const express = require('express');
-const routes = express.Router();
+// const express = require('express');
+// const routes = express.Router();
 
-const ProductController = require('./controllers/ProductController');
+// const ProductController = require('./controllers/ProductController');
 
-routes.get('/', ProductController.index);
-routes.post('/', ProductController.create);
+// // routes.get('/', (req, res) => {
+// //     res.sendFile(__dirname + '/views/index.html');
+// // });
 
-module.exports = routes;
+// routes.post('/', ProductController.create);
+
+// module.exports = routes;
