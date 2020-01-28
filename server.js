@@ -2,9 +2,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const requireDir = require('require-dir');
 const bodyParser = require('body-parser');
-const ejs = require('ejs');
 
 const app = express();
+
+mongoose.Promise = global.Promise;
 
 mongoose.connect('mongodb://localhost/crud-sys3', { // porta do Mongo: 27017
     useNewUrlParser: true,
