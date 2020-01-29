@@ -50,6 +50,9 @@ const json_products = {
                 "CAPA GIRATÓRIA",
                 1,
                 2,
+                3,
+                4,
+                5
             ]
         },
         {
@@ -59,6 +62,9 @@ const json_products = {
                 "CP MB 501",
                 1,
                 2,
+                3,
+                4,
+                5
             ]
         },
         {
@@ -68,6 +74,9 @@ const json_products = {
                 "CP MB 502",
                 1,
                 2,
+                3,
+                4,
+                5
             ]
         },
         {
@@ -77,6 +86,9 @@ const json_products = {
                 "CP DUOS TOUCH",
                 1,
                 2,
+                3,
+                4,
+                5
             ]
         },
         {
@@ -86,6 +98,9 @@ const json_products = {
                 "CP DUOS TOUCH",
                 1,
                 2,
+                3,
+                4,
+                5
             ]
         },
         {
@@ -95,6 +110,9 @@ const json_products = {
                 "CP DUOS TOUCH",
                 1,
                 2,
+                3,
+                4,
+                5
             ]
         },
         {
@@ -104,6 +122,9 @@ const json_products = {
                 "CP DUOS TOUCH",
                 1,
                 2,
+                3,
+                4,
+                5
             ]
         },
         {
@@ -113,6 +134,9 @@ const json_products = {
                 "CP DUOS TOUCH",
                 1,
                 2,
+                3,
+                4,
+                5
             ]
         },
         {
@@ -122,6 +146,9 @@ const json_products = {
                 "CP DUOS TOUCH",
                 1,
                 2,
+                3,
+                4,
+                5
             ]
         },
         {
@@ -131,6 +158,9 @@ const json_products = {
                 "CP DUOS TOUCH",
                 1,
                 2,
+                3,
+                4,
+                5
             ]
         },
         {
@@ -140,6 +170,9 @@ const json_products = {
                 "CP DUOS TOUCH",
                 1,
                 2,
+                3,
+                4,
+                5
             ]
         }
     ]
