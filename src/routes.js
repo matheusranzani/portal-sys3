@@ -50,6 +50,8 @@ routes.post('/edit/:id', (req, res) => {
     }).catch(err => {
         console.log(`erro -> ${err}`);
     });
+
+    res.redirect('/consultar-produtos');
 });
 routes.get('/delete/:id', (req, res) => {
     Product.findByIdAndDelete(req.params.id).then(() => {
@@ -57,6 +59,8 @@ routes.get('/delete/:id', (req, res) => {
     }).catch(err => {
         console.log('erro ao excluir -> ' + err);
     });
+
+    res.redirect('/consultar-produtos');
 });
 
 module.exports = routes;
