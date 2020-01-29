@@ -44,7 +44,7 @@ body {
   width: 134px;
   height: 40px;
   color: #fff;
-  background: transparent url("./header-img.svg") 0% 0% no-repeat padding-box;
+  background: transparent url("/images/header-img_login.svg") 0% 0% no-repeat padding-box;
 }
 
 .main-container {

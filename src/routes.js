@@ -31,9 +31,6 @@ routes.get('/editar-produtos/:id', (req, res) => {
     });
 });
 
-routes.get('/login', (req, res) => {
-    res.render('tela-login/index.ejs');
-});
 
 routes.post('/create', ProductController.create);
 routes.post('/edit/:id', (req, res) => {
@@ -50,7 +47,7 @@ routes.post('/edit/:id', (req, res) => {
     }).catch(err => {
         console.log(`erro -> ${err}`);
     });
-
+    
     res.redirect('/consultar-produtos');
 });
 routes.get('/delete/:id', (req, res) => {
@@ -59,8 +56,12 @@ routes.get('/delete/:id', (req, res) => {
     }).catch(err => {
         console.log('erro ao excluir -> ' + err);
     });
-
+    
     res.redirect('/consultar-produtos');
+});
+
+routes.get('/login', (req, res) => {
+    res.render('index_login.ejs');
 });
 
 module.exports = routes;
