@@ -70,6 +70,14 @@
                                     <td><%= products.code %></td>
                                     <td><%= products.description %></td>
                                     <td><%= products.stockQuantity %></td>
+                                    <td>
+                                        <a href="editar-produtos/<%= products._id %>">
+                                            <button class="edit-button">Editar</button>
+                                        </a>
+                                        <a href="delete/<%= products._id %>">
+                                            <button class="delete-button">Deletar</button>
+                                        </a>
+                                    </td>
                                 </tr>
                             <% }) %>
                             </tbody>

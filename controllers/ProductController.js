@@ -6,4 +6,7 @@ module.exports = {
     async create(req, res) {
         await Product.create(req.body);
     },
+    // async update(req, res) {
+    //     await Product.
+    // }
 }
