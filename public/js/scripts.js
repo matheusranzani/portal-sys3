@@ -218,66 +218,68 @@ const json_sells = {
     ]
 }
 
-// const paginationDiv = document.getElementById('table-pagination');
+const paginationDiv = document.getElementById('table-pagination');
 
-// let current_page = 1;
-// let rows = 6;
+let current_page = 1;
+let rows = 6;
 
-// function fillTable(tableBodyId, json, rows, page) {
-//     const tableBodyElement = document.getElementById(tableBodyId);
+function fillTable(tableBodyId, json, rows, page) {
+    const tableBodyElement = document.getElementById(tableBodyId);
     
-//     tableBodyElement.innerHTML = '';
+    tableBodyElement.innerHTML = '';
 
-//     page--;
+    page--;
 
-//     if (tableBodyElement.id === 'sells-body') {
-//         rows = 5;
-//     }
+    if (tableBodyElement.id === 'sells-body') {
+        rows = 5;
+    }
 
-// 	let start = rows * page;
-// 	let end = start + rows;
-//     let paginatedItems = (json.rows.slice(start, end));
+	let start = rows * page;
+	let end = start + rows;
+    let paginatedItems = (json.rows.slice(start, end));
 
-//     for (let i = 0; i < paginatedItems.length; i++) {
-//         const tr = document.createElement('tr');
+    for (let i = 0; i < paginatedItems.length; i++) {
+        const tr = document.createElement('tr');
         
-//         for (let j = 0; j < json.rows[0].data.length; j++) {
-//             const td = document.createElement('td');
-//             td.appendChild(document.createTextNode(paginatedItems[i].data[j]));
-//             tr.appendChild(td);
-//         }
+        for (let j = 0; j < json.rows[0].data.length; j++) {
+            const td = document.createElement('td');
+            td.appendChild(document.createTextNode(paginatedItems[i].data[j]));
+            tr.appendChild(td);
+        }
         
-//         tableBodyElement.appendChild(tr);
-//     }
-// }
+        tableBodyElement.appendChild(tr);
+    }
+}
 
-// function tablePagination(tabDiv, pagDiv, json, rows) {
-//     let page_count = Math.ceil(json.rows.length / rows);
+function tablePagination(tabDiv, pagDiv, json, rows) {
+    let page_count = Math.ceil(json.rows.length / rows);
 
-//     for (let i = 1; i < page_count + 1; i++) {
-//         let button = paginationButton(tabDiv, json, i);
-// 		pagDiv.appendChild(button);
-// 	}
-// }
+    for (let i = 1; i < page_count + 1; i++) {
+        let button = paginationButton(tabDiv, json, i);
+		pagDiv.appendChild(button);
+	}
+}
 
-// function paginationButton(tabDiv, json, page) {
-//     let button = document.createElement('button');
-//     button.setAttribute('class', 'search-product-pagination');
-//     button.innerText = page;
+function paginationButton(tabDiv, json, page) {
+    let button = document.createElement('button');
+    button.setAttribute('class', 'search-product-pagination');
+    button.innerText = page;
 
-//     button.addEventListener('click', function() {
-//         current_page = page;
+    button.addEventListener('click', function() {
+        current_page = page;
         
-// 		fillTable(tabDiv, json, rows, current_page);
-// 	});
+		fillTable(tabDiv, json, rows, current_page);
+	});
 
-// 	return button;
-// }
+	return button;
+}
 
 // if (document.querySelector("#products-table")) {
 //     fillTable('products-body', json_products, rows, current_page);
 //     tablePagination('products-body', paginationDiv, json_products, rows);
-// } else if (document.querySelector("#sells-table")) {
-//     fillTable('sells-body', json_sells, rows, current_page);
-//     tablePagination('sells-body', paginationDiv, json_sells, rows);
-// }
+// } 
+
+if (document.querySelector("#sells-table")) {
+    fillTable('sells-body', json_sells, rows, current_page);
+    tablePagination('sells-body', paginationDiv, json_sells, rows);
+}

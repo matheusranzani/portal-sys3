@@ -61,14 +61,15 @@
                                     <th>Cód.</th>
                                     <th>Descrição</th>
                                     <th>Qtde. Total</th>
+                                    <th>Ações</th>
                                 </tr>
                             </thead>
                             <% products.forEach(products => { %>
                             <tbody id="products-body">
                                 <tr>
-                                    <td><% products.code %></td>
-                                    <td><% products.description %></td>
-                                    <td><% products.stockQuantity %></td>
+                                    <td><%= products.code %></td>
+                                    <td><%= products.description %></td>
+                                    <td><%= products.stockQuantity %></td>
                                 </tr>
                             <% }) %>
                             </tbody>

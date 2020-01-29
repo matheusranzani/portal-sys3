@@ -14,8 +14,10 @@ routes.get('/cadastrar-produtos', (req, res) => {
     res.render('cadastrar-produtos.ejs');
 });
 routes.get('/consultar-produtos', (req, res) => {
-    Product.find().then((products) => {
-        res.render('consultar-produtos.ejs', { products: products });
+    Product.find().sort( {createdAt: 'desc'} ).then((products) => {
+        res.render('consultar-produtos.ejs', { products });
+    }).catch(err => {
+        console.log(`erro -> ${err}`);
     });
 });
 routes.get('/consultar-vendas', (req, res) => {
