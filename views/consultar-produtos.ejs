@@ -61,7 +61,7 @@
                                     <th>Cód.</th>
                                     <th>Descrição</th>
                                     <th>Qtde. Total</th>
-                                    <th>Ações</th>
+                                    <th style="text-align: center;">Ações</th>
                                 </tr>
                             </thead>
                             <% products.forEach(products => { %>
@@ -70,7 +70,7 @@
                                     <td><%= products.code %></td>
                                     <td><%= products.description %></td>
                                     <td><%= products.stockQuantity %></td>
-                                    <td>
+                                    <td class="flex-center">
                                         <a href="editar-produtos/<%= products._id %>">
                                             <button class="edit-button">Editar</button>
                                         </a>

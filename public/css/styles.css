@@ -487,6 +487,7 @@ input::-webkit-inner-spin-button {
     background-color: rgb(109, 216, 150);
     color: #fff;
     border-radius: 3px;
+    margin-right: 14px;
 }
 
 .delete-button {
@@ -498,4 +499,9 @@ input::-webkit-inner-spin-button {
     background-color: rgb(212, 80, 40);
     color: #fff;
     border-radius: 3px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
 }
