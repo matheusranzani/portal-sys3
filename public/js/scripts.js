@@ -329,10 +329,12 @@ function paginationButton(tabDiv, json, page) {
 	return button;
 }
 
-if (document.querySelector("#products-table")) {
-    fillTable('products-body', json_products, rows, current_page);
-    tablePagination('products-body', paginationDiv, json_products, rows);
-} else if (document.querySelector("#sells-table")) {
+// if (document.querySelector("#products-table")) {
+//     fillTable('products-body', json_products, rows, current_page);
+//     tablePagination('products-body', paginationDiv, json_products, rows);
+// } 
+
+if (document.querySelector("#sells-table")) {
     fillTable('sells-body', json_sells, rows, current_page);
     tablePagination('sells-body', paginationDiv, json_sells, rows);
 }

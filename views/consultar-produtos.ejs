@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Portal Sys3</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <div id="header">
+            <img src="/images/header-img.svg" alt="Logo Sys3 Header">
+        </div>
+
+        <div id="container">
+            <div id="sidebar">
+                <div class="links">
+                    <img class="box" src="/images/box.svg" alt="Box Icon"> <a href="/">Dashboard</a>
+                </div>
+    
+                <button class="collapsible" onclick="handleProducts()">
+                    <img class="box" src="/images/box.svg" alt="Box Icon"> <span>Produtos</span>
+                </button>
+                <div class="collapsible-content">
+                    <div class="collapsible-links">
+                        <img class="box" src="images/box.svg" alt="Box Icon"> <a href="consultar-produtos">Consultar</a>
+                    </div>
+                    <div class="collapsible-links">
+                        <img class="box" src="/images/box.svg" alt="Box Icon"> <a href="cadastrar-produtos">Cadastrar</a>
+                    </div>
+                    <div class="collapsible-links">
+                        <img class="box" src="/images/box.svg" alt="Box Icon"> <a href="cadastrar-produtos-todos-os-campos">Cadastrar 2</a>
+                    </div>
+                </div>
+    
+                <div class="links">
+                    <img class="box" src="/images/box.svg" alt="Box Icon"> <a href="consultar-vendas">Vendas</a>
+                </div>
+
+                <div class="links">
+                    <img class="box" src="/images/box.svg" alt="Box Icon"> <a href="">Configurações</a>
+                </div>
+
+                <div class="links">
+                    <img class="box" src="/images/box.svg" alt="Box Icon"> <a href="/login">Tela de Login</a>
+                </div>
+            </div>
+    
+            <div id="main-container">
+                <h1>PRODUTOS</h1>
+                <div class="content-container">
+                    <div class="content-header">
+                        <h1>CONSULTA</h1>
+                    </div>
+
+                    <div class="table-buttons">
+                        <button>+ Criar</button>
+                        <button>+ Filtrar</button>
+                    </div>
+
+                    <div id="table-content" class="table-content">
+                        <table id="products-table">
+                            <thead>
+                                <tr>
+                                    <th>Cód.</th>
+                                    <th>Descrição</th>
+                                    <th>Qtde. Total</th>
+                                    <th style="text-align: center;">Ações</th>
+                                </tr>
+                            </thead>
+                            <% products.forEach(products => { %>
+                            <tbody id="products-body">
+                                <tr>
+                                    <td><%= products.code %></td>
+                                    <td><%= products.description %></td>
+                                    <td><%= products.stockQuantity %></td>
+                                    <td class="flex-center">
+                                        <a href="editar-produtos/<%= products._id %>">
+                                            <button class="edit-button">Editar</button>
+                                        </a>
+                                        <a href="delete/<%= products._id %>">
+                                            <button class="delete-button">Deletar</button>
+                                        </a>
+                                    </td>
+                                </tr>
+                            <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div id="table-pagination" class="table-pagination">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/js/scripts.js"></script>
+    </body>
+</html>

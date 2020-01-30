@@ -1,0 +1,507 @@
+/* Importação da fonte */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+/* Reset CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Verdana, sans-serif;
+}
+
+body {
+    height: 100vh;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Header e SideBar */
+
+#header {
+    width: 100%;
+    height: 50px;
+    background: #0000EE 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000033;
+    opacity: 1;
+}
+
+#header img {
+    width: 84px;
+    height: 25px;
+    margin-left: 84px;
+    margin-top: 13px;
+    margin-bottom: 12px; 
+}
+
+#sidebar {
+    width: 300px;
+    height: 100%;
+    padding: 64px 12px 0;
+    background: #F2F2FF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 0px 6px #00000029;
+    opacity: 1;
+}
+
+/* Links padrão da SideBar */
+
+.links {
+    width: 276px;
+    height: 47px;
+    padding: 10px 0px 10px 32px;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 0;
+    color: #000000;
+    display: flex;
+    justify-content: flex-start;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+}
+
+.links a {
+    margin-left: 13px;
+    color: #000;
+    text-decoration: none;
+}
+
+.links a:visited {
+    color: #000000;
+}
+
+.links a:hover {
+    color: #000000;
+}
+
+/* Tamanho da imagem */
+
+.box {
+    width: 25px;
+    height: 27px;
+}
+
+/* Div da animação */
+
+.collapsible {
+    font-family: 'Montserrat', Verdana, sans-serif;
+    width: 276px;
+    height: 47px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+    color: #000000;
+    padding: 10px 0px 10px 32px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    outline: none;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 0;
+}
+
+.collapsible span {
+    margin-left: 13px;
+    margin-right: 75px;
+}
+
+.collapsible::after {
+    content: '\002B';
+    color: black;
+    font-weight: bold;
+    float: right;
+}
+
+.active::after {
+    content: "\2212";
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background: #ced5de 0% 0% no-repeat padding-box;
+    font-size: 20px;
+}
+
+/* Links da animação */
+
+.collapsible-links {
+    width: 276px;
+    height: 40px;
+    padding: 10px 0px 10px 70px;
+    font-weight: bold;
+    font-size: 22px;
+    letter-spacing: 0;
+    color: #000000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #ced5de 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    opacity: 1;
+}
+
+.collapsible-links a {
+    margin-left: 13px;
+    color: #000;
+    text-decoration: none;
+}
+
+.collapsible-links a:hover {
+    color: #000;
+}
+
+.collapsible-links a:visited {
+    color: #000;
+}
+
+/* Main Container */
+
+#container {
+    height: calc(100% - 50px);
+    display: flex;
+}
+
+#main-container {
+    width: calc(100% - 300px);
+    margin: 10px 20px;
+}
+
+#main-container h1 {
+    font-size: 20px;
+    color: #5d6363;
+}
+
+/* Container dos Conteúdos */
+
+.content-container {
+    width: 100%;
+    height: 510px;
+    margin-top: 20px;
+    background: #F2F2FF 0% 0% no-repeat padding-box;
+    box-shadow: 4px 4px 6px #00000029;
+    position: relative;
+}
+
+/* Header do Conteúdo */
+
+.content-header {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #5d6363;
+}
+
+.content-header h1 {
+    font-size: 20px;
+    padding: 5px 5px;
+}
+
+/* Botões Criar e Filtrar */
+
+.table-buttons {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.table-buttons button {
+    font-size: 14px;
+    color: #42bda4;
+    font-weight: bold;
+}
+
+/* Tabela */
+
+.table-content {
+    padding: 0 10px;
+}
+
+.table-content table {
+    width: 100%;
+    font-size: 14px;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.table-content th {
+    color: #FFFFFF;
+    background-color: #42bda4;
+    padding: 10px;
+}
+
+.table-content td {
+    background-color: #fff;
+    padding: 10px 15px;
+    border-bottom: 1px solid #c5d1cf;
+}
+
+/* Paginção da Tabela */
+
+.table-pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 24px;
+}
+
+.table-pagination .search-product-pagination {
+    width: 30px;
+    height: 30px;
+    background-color: #42bda4;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 24px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.table-pagination .search-sell-pagination {
+    width: 30px;
+    height: 30px;
+    background-color: #42bda4;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+/* Cadastro de Produtos (form) */
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 28px 10px 10px;
+}
+
+.display-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.default-span {
+    font-size: 16px;
+    color: #5d6363;
+    margin-bottom: 5px;
+}
+
+.input-container .no-register {
+    font-size: 12px;
+    color: #f00;
+    margin-top: 5px;
+}
+
+.input-container .default-input {
+    width: 200px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #707070;
+    background: #fff 0% 0% no-repeat padding-box;
+    padding: 5px;
+}
+
+/* Botão ON/OFF*/
+
+.input-button-on {
+    width: 50px;
+    height: 30px;
+    font-size: 16px;
+    background-color: #42bda4;
+    color: #fff;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.input-button-off {
+    width: 50px;
+    height: 30px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #5d6363;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Comboboxes */
+
+.input-container select {
+    width: 200px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #707070;
+    background: #fff 0% 0% no-repeat padding-box;
+    padding: 5px;
+}
+
+.input-container option {
+    color: #fff;
+    background-color: #42bda4;
+}
+
+/* Input number */
+
+.barcode-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.barcode-input {
+    width: 360px;
+    height: 30px;
+    border: 1px solid #707070;
+    background: #fff 0% 0% no-repeat padding-box;
+    padding: 5px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+/* Botões Cód. Barras */
+
+.add-barcode {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    background-color: #42bda4;
+    color: #fff;
+}
+
+.search-barcode {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    background-color: rgb(25, 147, 228);
+    color: #fff;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* Informações do Produto */
+
+.product-data-container {
+    border-top: 1px solid #bebdbd;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+}
+
+/* margin/padding (3 values): top right_left bottom; */
+
+.input-product-data {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px 10px 10px;
+}
+
+.product-data-container span {
+    font-size: 16px;
+    color: #5d6363;
+    margin-bottom: 5px;
+}
+
+.product-data-container .default-product-data-input {
+    width: 145px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #707070;
+    background: #fff 0% 0% no-repeat padding-box;
+    padding: 5px;
+}
+
+/* Quantidade Estoque Input */
+
+.stock-quantity-input {
+    width: 310px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #707070;
+    background: #fff 0% 0% no-repeat padding-box;
+    padding: 5px;
+}
+
+/* Botões Reset e Submit */
+
+.buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 14px;
+}
+
+.reset-button {
+    width: 80px;
+    height: 30px;
+    padding: 5px;
+    font-weight: bold;
+    background-color: rgb(25, 147, 228);
+    color: #fff;
+    border-radius: 3px;
+}
+
+.submit-button {
+    width: 80px; 
+    height: 30px;
+    padding: 5px;
+    font-weight: bold;
+    background-color: #42bda4;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+/* Feito na construção do CRUD */
+
+.crud-buttons-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+}
+
+.edit-button {
+    width: 50px; 
+    height: 30px;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: rgb(109, 216, 150);
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 14px;
+}
+
+.delete-button {
+    width: 50px; 
+    height: 30px;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    background-color: rgb(212, 80, 40);
+    color: #fff;
+    border-radius: 3px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
