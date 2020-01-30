@@ -68,6 +68,10 @@ routes.get('/delete/:id', (req, res) => {
     res.redirect('/consultar-produtos');
 });
 
+routes.get('/cadastrar-produtos-todos-os-campos', (req, res) => {
+    res.render('cadastrar-produtos-todos-os-campos.ejs');
+});
+
 routes.get('/login', (req, res) => {
     res.render('index_login.ejs');
 });

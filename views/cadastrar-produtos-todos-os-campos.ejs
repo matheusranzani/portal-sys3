@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Portal Sys3</title>
+        <link rel="stylesheet" href="/css/styles_cadastro2.css">
+    </head>
+    <body>
+        <div id="header">
+            <img src="/images/header-img.svg" alt="Logo Sys3 Header">
+        </div>
+
+        <div id="container">
+            <div id="sidebar">
+                <div class="links">
+                    <img class="box" src="/images/box.svg" alt="Box Icon"> <a href="index">Dashboard</a>
+                </div>
+    
+                <button class="collapsible" onclick="handleProducts()">
+                    <img class="box" src="/images/box.svg" alt="Box Icon"> <span>Produtos</span>
+                </button>
+                <div class="collapsible-content">
+                    <div class="collapsible-links">
+                        <img class="box" src="/images/box.svg" alt="Box Icon"> <a href="consultar-produtos">Consultar</a>
+                    </div>
+                    <div class="collapsible-links">
+                        <img class="box" src="/images/box.svg" alt="Box Icon"> <a href="cadastrar-produtos">Cadastrar</a>
+                    </div>
+                    <div class="collapsible-links">
+                        <img class="box" src="/images/box.svg" alt="Box Icon"> <a href="">Cadastrar 2</a>
+                    </div>
+                </div>
+    
+                <div class="links">
+                    <img class="box" src="/images/box.svg" alt="Box Icon"> <a href="consultar-vendas">Vendas</a>
+                </div>
+
+                <div class="links">
+                    <img class="box" src="images/box.svg" alt="Box Icon"> <a href="">Configurações</a>
+                </div>
+
+                <div class="links">
+                    <img class="box" src="/images/box.svg" alt="Box Icon"> <a href="login">Tela de Login</a>
+                </div>
+            </div>
+    
+            <div id="main-container">
+                <h1>PRODUTOS (não fiz o CRUD nesse aqui)</h1>
+                <div class="content-container">
+                    <div class="content-header">
+                        <h1>CADASTRO</h1>
+                    </div>
+
+                    <form class="form-vendas">
+                        <div class="input-container">
+                            <span class="default-span">Código</span>
+                            <input type="text" class="default-input">
+                        </div>
+
+                        <div class="input-container">
+                            <span class="default-span">Cód. Próprio</span>
+                            <input type="text" class="default-input">
+                        </div>
+                        
+                        <div class="input-container">
+                            <span class="default-span">Ativo?</span>
+                            <div class="display-row">
+                                <button type="button" class="input-button-on" id="on" value="on" onclick="switchButtonToOn();">ON</button>
+                                <button type="button" class="input-button-off" id="off" value="off" onclick="switchButtonToOff();">OFF</button>
+                            </div>
+                        </div>
+
+
+                        <div class="input-container">
+                            <span class="default-span">Descrição</span>
+                            <input type="text" class="default-input">
+                        </div>
+
+                        <div class="input-container">
+                            <span class="default-span">Embalagem</span>
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                            <span class="no-register">Não há embalagens cadastradas</span>
+                        </div>
+
+                        <div class="input-container">
+                            <span class="default-span">Grupo</span>
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                            <span class="no-register">Não há grupos cadastrados</span>
+                        </div>
+
+                        <div class="barcode-container">
+                            <span class="default-span">Cód. Barras</span>
+                            <div class="display-row">
+                                <input type="number" class="barcode-input">
+                                <button class="add-barcode">+</button>
+                                <button class="search-barcode">?</button>
+                            </div>
+                        </div>
+
+                        <div class="product-data-container">
+                            <div class="input-product-data">
+                                <span>R$ Custo</span>
+                                <input type="number" class="default-product-data-input">
+                            </div>
+
+                            <div class="input-product-data">
+                                <span>% MKP</span>
+                                <input type="number" class="default-product-data-input">
+                            </div>
+
+                            <div class="input-product-data">
+                                <span>R$ Preço Venda</span>
+                                <input type="number" class="default-product-data-input">
+                            </div>
+
+                            <div class="input-product-data">
+                                <span>% Comissão</span>
+                                <input type="number" class="default-product-data-input">
+                            </div>
+
+                            <div class="input-product-data">
+                                <span>NCM</span>
+                                <input type="number" class="default-product-data-input">
+                            </div>
+
+                            <div class="input-product-data">
+                                <span>CST</span>
+                                <input type="number" class="default-product-data-input">
+                            </div>
+
+                            <div class="input-product-data">
+                                <span>Quantidade Estoque</span>
+                                <input type="number" class="stock-quantity-input">
+                            </div>
+                        </div>
+
+                        <div class="buttons-container">
+                            <button type="submit" class="submit-button">Salvar</button>
+                            <button type="reset" onclick="switchButtonToOn();" class="reset-button">Cancelar</button>
+                        </div>
+                    </form>    
+                </div>
+            </div>
+        </div>
+
+        <script src="/js/scripts.js"></script>
+    </body>
+</html>
