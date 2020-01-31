@@ -338,3 +338,19 @@ if (document.querySelector("#sells-table")) {
     fillTable('sells-body', json_sells, rows, current_page);
     tablePagination('sells-body', paginationDiv, json_sells, rows);
 }
+
+const checkbox = document.querySelector('#checkbox');
+
+function showPassword() {
+    const passwordInput = document.querySelector('.password-input');
+
+    if (checkbox.checked) {
+        passwordInput.type = 'text';
+    } else {
+        passwordInput.type = 'password';
+    }
+}
+
+checkbox.onclick = () => {
+    showPassword();
+}
